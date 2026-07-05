@@ -38,15 +38,15 @@
 )
 
 // Inline code styling
-#show raw.where(block: false): text(size: 9.5pt, fill: #d14, font: "DejaVu Sans Mono")
+#show raw.where(block: false): text(size: 9.5pt, fill: rgb("#d14"), font: "DejaVu Sans Mono")
 
 // Link styling
 #show link: text.with(fill: blue)
 
 // Chapter headings
-#show heading.where(level: 1): set text(size: 24pt, weight: "bold", fill: #1a365d)
-#show heading.where(level: 2): set text(size: 18pt, weight: "bold", fill: #2c5282)
-#show heading.where(level: 3): set text(size: 14pt, weight: "semibold", fill: #2b6cb0)
+#show heading.where(level: 1): set text(size: 24pt, weight: "bold", fill: rgb("#1a365d"))
+#show heading.where(level: 2): set text(size: 18pt, weight: "bold", fill: rgb("#2c5282"))
+#show heading.where(level: 3): set text(size: 14pt, weight: "semibold", fill: rgb("#2b6cb0"))
 
 // Header and footer
 #set page(header: context {
@@ -206,7 +206,7 @@
   set text(size: 24pt, weight: "bold")
   it
   v(0.5em)
-  line(length: 50%, stroke: 2pt + #1a365d)
+  line(length: 50%, stroke: 2pt + rgb("#1a365d"))
   v(1em)
 }
 
