@@ -2,7 +2,7 @@
 
 > A 30–40 Day Hands-on Learning Journey — From Zero to Building Real-World Projects
 
-[![Build and Deploy](https://github.com/yourusername/python-book/actions/workflows/deploy.yml/badge.svg)](https://github.com/yourusername/python-book/actions/workflows/deploy.yml)
+[![Build and Deploy](https://github.com/birhekobo/python-book/actions/workflows/deploy.yml/badge.svg)](https://github.com/birhekobo/python-book/actions/workflows/deploy.yml)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/)
 [![Jupyter Book](https://img.shields.io/badge/built%20with-Jupyter%20Book-orange.svg)](https://jupyterbook.org/)
@@ -39,13 +39,13 @@ A professional, interactive, beginner-friendly eBook that teaches Python program
 
 ### Online (Recommended)
 
-Visit the live book at: [https://yourusername.github.io/python-book](https://yourusername.github.io/python-book)
+Visit the live book at: [https://birhekobo.github.io/python-book](https://birhekobo.github.io/python-book)
 
 ### Local Development
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/python-book.git
+git clone https://github.com/birhekobo/python-book.git
 cd python-book
 
 # Install dependencies
@@ -128,7 +128,7 @@ Edit files in `typst/`:
 
 ## Deployment
 
-This book automatically deploys to GitHub Pages via GitHub Actions on every push to `main`. Manual deployment:
+This book automatically deploys to GitHub Pages via GitHub Actions on every push to `master`. Manual deployment:
 
 ```bash
 # Build the site
