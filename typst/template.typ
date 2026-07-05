@@ -35,7 +35,7 @@
 )
 
 // Inline code styling
-#show raw.where(block: false): set text(size: 9.5pt, fill: rgb(0xd14), font: "DejaVu Sans Mono")
+#show raw.where(block: false): set text(size: 9.5pt, fill: rgb(0xdd1144), font: "DejaVu Sans Mono")
 
 // Link styling
 #show link: text.with(fill: blue)
