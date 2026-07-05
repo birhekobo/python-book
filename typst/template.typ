@@ -35,15 +35,15 @@
 )
 
 // Inline code styling
-#show raw.where(block: false): set text(size: 9.5pt, fill: rgb(0xdd1144), font: "DejaVu Sans Mono")
+#show raw.where(block: false): set text(size: 9.5pt, fill: rgb(221, 17, 68), font: "DejaVu Sans Mono")
 
 // Link styling
 #show link: text.with(fill: blue)
 
 // Chapter headings
-#show heading.where(level: 1): set text(size: 24pt, weight: "bold", fill: rgb(0x1a365d))
-#show heading.where(level: 2): set text(size: 18pt, weight: "bold", fill: rgb(0x2c5282))
-#show heading.where(level: 3): set text(size: 14pt, weight: "semibold", fill: rgb(0x2b6cb0))
+#show heading.where(level: 1): set text(size: 24pt, weight: "bold", fill: rgb(26, 54, 93))
+#show heading.where(level: 2): set text(size: 18pt, weight: "bold", fill: rgb(44, 82, 130))
+#show heading.where(level: 3): set text(size: 14pt, weight: "semibold", fill: rgb(43, 108, 176))
 
 // Header and footer
 #set page(header: context {
@@ -85,7 +85,7 @@
 
 // Note/Info block
 #let note(body) = block(
-  fill: luma(230, 245, 255),
+  fill: rgb(230, 245, 255),
   inset: 10pt,
   radius: 4pt,
   stroke: (left: 4pt + blue),
@@ -96,7 +96,7 @@
 
 // Tip block
 #let tip(body) = block(
-  fill: luma(230, 255, 230),
+  fill: rgb(230, 255, 230),
   inset: 10pt,
   radius: 4pt,
   stroke: (left: 4pt + green),
@@ -107,7 +107,7 @@
 
 // Warning block
 #let warning(body) = block(
-  fill: luma(255, 245, 230),
+  fill: rgb(255, 245, 230),
   inset: 10pt,
   radius: 4pt,
   stroke: (left: 4pt + orange),
@@ -118,7 +118,7 @@
 
 // Important block
 #let important(body) = block(
-  fill: luma(255, 230, 230),
+  fill: rgb(255, 230, 230),
   inset: 10pt,
   radius: 4pt,
   stroke: (left: 4pt + red),
@@ -129,7 +129,7 @@
 
 // Exercise block
 #let exercise(number: none, body) = block(
-  fill: luma(245, 240, 255),
+  fill: rgb(245, 240, 255),
   inset: 10pt,
   radius: 4pt,
   stroke: (left: 4pt + purple),
@@ -140,7 +140,7 @@
 
 // Quiz question block
 #let quiz-question(number: none, body) = block(
-  fill: luma(255, 250, 230),
+  fill: rgb(255, 250, 230),
   inset: 10pt,
   radius: 4pt,
   stroke: (left: 4pt + yellow),
@@ -151,7 +151,7 @@
 
 // Learning objectives box
 #let objectives(body) = block(
-  fill: luma(240, 248, 255),
+  fill: rgb(240, 248, 255),
   inset: 10pt,
   radius: 4pt,
   stroke: 1pt + teal,
@@ -163,7 +163,7 @@
 
 // Key takeaways box
 #let takeaways(body) = block(
-  fill: luma(245, 255, 250),
+  fill: rgb(245, 255, 250),
   inset: 10pt,
   radius: 4pt,
   stroke: (left: 4pt + teal),
@@ -175,7 +175,7 @@
 
 // Summary box
 #let summary(body) = block(
-  fill: luma(248, 248, 248),
+  fill: rgb(248, 248, 248),
   inset: 10pt,
   radius: 4pt,
 )[
@@ -203,7 +203,7 @@
   set text(size: 24pt, weight: "bold")
   it
   v(0.5em)
-  line(length: 50%, stroke: 2pt + rgb(0x1a365d))
+  line(length: 50%, stroke: 2pt + rgb(26, 54, 93))
   v(1em)
 }
 
