@@ -1,0 +1,46 @@
+# Python dependencies for Introduction to Python eBook
+# ====================================================
+# Core
+jupyter-book
+pyyaml
+
+# Extensions
+sphinx-design
+sphinx-copybutton
+sphinx-inline-tabs
+sphinx-tippy
+sphinxcontrib-bibtex
+sphinx-exercise
+sphinx-proof
+sphinxcontrib-mermaid
+sphinxext-opengraph
+sphinx-jupyterbook-latex
+sphinxcontrib-youtube
+
+# MyST
+myst-parser
+myst-nb
+
+# Programming
+ipykernel
+ipywidgets
+nbformat
+jupytext
+
+# Data Science & Visualization
+numpy
+pandas
+matplotlib
+plotly
+
+# Testing & Validation
+pytest
+pytest-notebook
+linkchecker
+nbval
+
+# Typst PDF generation
+typst
+
+# Utilities
+ghp-import

@@ -1,0 +1,100 @@
+# GitHub Actions workflow for "Introduction to Python"
+# ====================================================
+# Builds Jupyter Book (MyST), generates Typst PDF, and deploys to GitHub Pages
+
+name: Build and Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v3
+        with:
+          typst-version: "latest"
+
+      - name: Validate links
+        run: |
+          python -m pytest --check-links --check-links-ignore "^https?://localhost" book/ || true
+
+      - name: Build Jupyter Book site (HTML)
+        run: |
+          jupyter-book build --html
+        env:
+          BASE_URL: /python-book/
+
+      - name: Generate Typst PDF
+        run: |
+          typst compile typst/template.typ _build/pdf/python-book.pdf --font-path typst/fonts/
+
+      - name: Verify PDF exists
+        run: |
+          if [ -f "_build/pdf/python-book.pdf" ]; then
+            echo "PDF generated successfully: $(du -h _build/pdf/python-book.pdf | cut -f1)"
+          else
+            echo "Warning: PDF not generated"
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_build/html"
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-book-pdf
+          path: _build/pdf/python-book.pdf
+          retention-days: 30
+
+      - name: Upload notebooks artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-notebooks
+          path: book/notebooks/
+          retention-days: 30
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.venv/
+env/
+*.egg
+
+# Jupyter Book
+_build/
+book/_build/
+
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Typst
+typst/fonts/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Generated
+book/images/logo.png
+book/images/logo-light.png
+book/images/logo-dark.png
+book/images/favicon.png
+
+# Dependencies
+node_modules/

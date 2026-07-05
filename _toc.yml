@@ -1,0 +1,97 @@
+# Table of Contents for "Introduction to Python"
+# =================================================
+format: jb-book
+root: book/intro
+parts:
+  - caption: Welcome
+    chapters:
+      - file: book/how-to-use
+      - file: book/setup
+      - file: book/learning-roadmap
+
+  - caption: "Week 1: Python Fundamentals"
+    chapters:
+      - file: book/day01
+      - file: book/day02
+      - file: book/day03
+      - file: book/day04
+      - file: book/day05
+      - file: book/day06
+      - file: book/projects/week1-project
+
+  - caption: "Week 2: Control Flow"
+    chapters:
+      - file: book/day07
+      - file: book/day08
+      - file: book/day09
+      - file: book/day10
+      - file: book/day11
+      - file: book/day12
+      - file: book/projects/week2-project
+
+  - caption: "Week 3: Functions"
+    chapters:
+      - file: book/day13
+      - file: book/day14
+      - file: book/day15
+      - file: book/day16
+      - file: book/day17
+      - file: book/day18
+      - file: book/projects/week3-project
+
+  - caption: "Week 4: Data Structures"
+    chapters:
+      - file: book/day19
+      - file: book/day20
+      - file: book/day21
+      - file: book/day22
+      - file: book/day23
+      - file: book/day24
+      - file: book/projects/week4-project
+
+  - caption: "Week 5: File I/O & Exception Handling"
+    chapters:
+      - file: book/day25
+      - file: book/day26
+      - file: book/day27
+      - file: book/day28
+      - file: book/day29
+      - file: book/day30
+      - file: book/projects/week5-project
+
+  - caption: "Week 6: Object-Oriented Programming"
+    chapters:
+      - file: book/day31
+      - file: book/day32
+      - file: book/day33
+      - file: book/day34
+      - file: book/day35
+      - file: book/day36
+      - file: book/projects/week6-project
+
+  - caption: "Week 7: Beyond Basics (Optional)"
+    chapters:
+      - file: book/day37
+      - file: book/day38
+      - file: book/day39
+      - file: book/day40
+      - file: book/projects/capstone-project
+
+  - caption: Resources
+    chapters:
+      - file: book/cheatsheets/python-cheatsheet
+      - file: book/glossary/index
+      - file: book/interview-questions/index
+      - file: book/faq/index
+      - file: book/references
+
+  - caption: Appendices
+    chapters:
+      - file: book/appendix-installation
+      - file: book/appendix-vscode
+      - file: book/appendix-git
+      - file: book/appendix-typst
+
+  - caption: Solutions
+    chapters:
+      - file: book/solutions/index

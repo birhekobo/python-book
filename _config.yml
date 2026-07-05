@@ -1,0 +1,124 @@
+# Jupyter Book configuration for "Introduction to Python"
+# ==========================================================
+title: "Introduction to Python"
+author: "Python Book Authors"
+copyright: "2026"
+logo: book/images/logo.png
+exclude_patterns:
+  - _build
+  - Thumbs.db
+  - .DS_Store
+  - "**.ipynb_checkpoints"
+  - typst/**
+  - README.md
+
+only_build_toc_files: true
+
+execute:
+  execute_notebooks: force
+  timeout: 60
+  allow_errors: false
+
+html:
+  favicon: book/images/favicon.png
+  baseurl: https://yourusername.github.io/python-book/
+  use_edit_page_button: true
+  use_issues_button: true
+  use_repository_button: true
+  use_download_button: true
+  home_page_in_navbar: true
+  show_navbar_depth: 2
+  extra_footer: |
+    <div class="text-center mt-4">
+      <p>
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+          <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="CC BY-NC-SA 4.0">
+        </a>
+      </p>
+      <p>
+        <strong>Introduction to Python</strong> by Python Book Authors is licensed under
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+          CC BY-NC-SA 4.0
+        </a>.
+      </p>
+    </div>
+  extra_navbar: |
+    <div class="text-center mt-2">
+      <a href="https://github.com/yourusername/python-book" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      &nbsp;|&nbsp;
+      <a href="book/notebooks/" target="_blank">
+        <i class="fas fa-download"></i> Download Notebooks
+      </a>
+    </div>
+  comments:
+    hypothesis: true
+
+latex:
+  latex_documents:
+    targetname: book.tex
+
+bibtex_bibfiles:
+  - references.bib
+
+sphinx:
+  config:
+    html_theme: sphinx_book_theme
+    html_theme_options:
+      repository_url: https://github.com/yourusername/python-book
+      repository_branch: main
+      path_to_docs: book
+      use_edit_page_button: true
+      use_issues_button: true
+      use_repository_button: true
+      use_download_button: true
+      home_page_in_navbar: true
+      show_navbar_depth: 2
+      navigation_depth: 4
+      collapse_navigation: false
+      show_toc_level: 2
+      logo:
+        image_light: book/images/logo-light.png
+        image_dark: book/images/logo-dark.png
+    html_sidebars:
+      "**":
+        - search-field
+        - navbar-links
+        - sbt-sidebar-nav
+    html_static_path:
+      - book/images
+    pygments_light_style: github-light
+    pygments_dark_style: nord-darker
+    mathjax_config:
+      tex:
+        inlineMath:
+          - ["$", "$"]
+          - ["\\(", "\\)"]
+        displayMath:
+          - ["$$", "$$"]
+          - ["\\[", "\\]"]
+    language: en
+    html_show_copyright: true
+    html_last_updated_fmt: "%b %d, %Y"
+  extra_extensions:
+    - sphinx.ext.intersphinx
+    - sphinx_tippy
+    - sphinx_copybutton
+    - sphinx_design
+    - sphinx_inline_tabs
+    - sphinxcontrib.mermaid
+    - sphinxcontrib.bibtex
+    - sphinx_jupyterbook_latex
+    - sphinx_proof
+    - sphinx_exercise
+    - sphinxcontrib.youtube
+    - sphinx_panels
+    - sphinxext.opengraph
+  intersphinx_mapping:
+    python:
+      - https://docs.python.org/3
+      - null
+    nbformat:
+      - https://nbformat.readthedocs.io/en/latest
+      - null
