@@ -21,7 +21,7 @@ execute:
 
 html:
   favicon: book/images/favicon.png
-  baseurl: https://yourusername.github.io/python-book/
+  baseurl: https://birhekobo.github.io/python-book/
   use_edit_page_button: true
   use_issues_button: true
   use_repository_button: true
@@ -44,7 +44,7 @@ html:
     </div>
   extra_navbar: |
     <div class="text-center mt-2">
-      <a href="https://github.com/yourusername/python-book" target="_blank">
+      <a href="https://github.com/birhekobo/python-book" target="_blank">
         <i class="fab fa-github"></i> GitHub
       </a>
       &nbsp;|&nbsp;
@@ -66,8 +66,8 @@ sphinx:
   config:
     html_theme: sphinx_book_theme
     html_theme_options:
-      repository_url: https://github.com/yourusername/python-book
-      repository_branch: main
+      repository_url: https://github.com/birhekobo/python-book
+      repository_branch: master
       path_to_docs: book
       use_edit_page_button: true
       use_issues_button: true

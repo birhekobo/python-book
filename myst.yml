@@ -5,7 +5,7 @@ project:
     A 30–40 day hands-on learning journey through Python programming.
     From zero to building real-world projects.
   author: "Python Book Authors"
-  github: https://github.com/yourusername/python-book
+  github: https://github.com/birhekobo/python-book
   license: CC-BY-NC-SA-4.0
   bibliography:
     - references.bib
@@ -99,5 +99,5 @@ site:
   options:
     logo: book/images/logo.svg
     favicon: book/images/favicon.svg
-    domain: yourusername.github.io
+    domain: birhekobo.github.io
     baseurl: /python-book/
