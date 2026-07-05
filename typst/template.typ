@@ -20,10 +20,7 @@
   lang: "en",
 )
 
-#set heading(
-  numbering: "1.1",
-  outline-indent: 1.5em,
-)
+#set heading(numbering: "1.1")
 
 #set par(justify: true, leading: 0.65em)
 
