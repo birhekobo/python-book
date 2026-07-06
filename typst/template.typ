@@ -63,7 +63,6 @@
 
 // Figures
 #set figure(
-  caption-position: bottom,
   numbering: "1.1",
 )
 
