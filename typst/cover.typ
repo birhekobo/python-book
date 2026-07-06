@@ -42,7 +42,7 @@
 
       // Description
       #block(width: 60%)[
-        #text(size: 11pt, align: center, fill: luma(220))[
+        #text(size: 11pt, fill: luma(220))[
           From Zero to Building Real-World Projects
           #v(0.5em)
           Interactive Lessons · Exercises · Quizzes · Projects · Notebooks

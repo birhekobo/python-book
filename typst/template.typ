@@ -50,7 +50,7 @@
   let page = counter(page).get().first()
   if page > 1 {
     box(height: 1.5em)[
-      #smallcaps[Introduction to Python] --- #text(size: 9pt)[#context { if counter(heading).get().len() > 0 { heading.display() } }]
+      #text(style: "smallcaps")[Introduction to Python] --- #text(size: 9pt)[#context { if counter(heading).get().len() > 0 { heading.display() } }]
       #box(width: 1fr)
       #text(size: 9pt)[#page]
     ]
