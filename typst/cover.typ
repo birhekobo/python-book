@@ -16,7 +16,7 @@
     #block(
       width: 100%,
       height: 100%,
-      fill: gradient.linear(..color.map.cycle("blue", 3), angle: 45deg),
+      fill: gradient.linear(blue, rgb(30, 100, 200), navy, angle: 45deg),
       inset: 0pt,
     )[
       #set text(fill: white)
