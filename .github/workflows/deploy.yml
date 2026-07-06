@@ -55,6 +55,7 @@ jobs:
 
       - name: Generate Typst PDF
         run: |
+          mkdir -p _build/pdf
           typst compile typst/template.typ _build/pdf/python-book.pdf --font-path typst/fonts/
 
       - name: Verify PDF exists
